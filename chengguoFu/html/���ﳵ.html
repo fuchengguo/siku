@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车-寺库中国_全球最大奢侈品交流平台</title>
+		<script src = "../js/jquery-1.10.1.min.js"></script>
+		<script src = "../js/商品详情页.js"></script>
+		<script src = "../js/购物车.js"></script>
+		<script src = "../js/jquery.cookie.js"></script>
+		
+		<link rel="stylesheet" href="../css/public.css">
+		<link rel="stylesheet" href="../css/注册.css">
+		<link rel="stylesheet" href="../css/登陆.css">
+		<link rel="stylesheet" href="../css/购物车.css">
+	</head>
+	<body>
+		<div class="shop_top">
+			<div class="shop_top1">
+				<div class="shop_logo"><a href=""><img src="../images/shopping/logo.png" /></a></div>
+				<div><img src="../images/shopping/c_05.jpg" /></div>
+			</div>
+		</div>
+		<!-- 购物车中间 -->
+		<div class="shop_center">
+			<div class="shop_centerBox">
+				<div class="shop_img" style="display: none;">
+					<div class="shop_text">
+						<p>购物车内暂时没有商品，您可以：</p>
+						<p><a href="主页.html">返回首页挑选商品</a></p>
+
+					</div>
+
+				</div>
+
+
+				<!-- 购物车商品详情页 -->
+				<div class="cartNav" style="display: none;">
+					<div class="navLogin">现在<a href="">登录</a>您购物车中的商品将被永久保存</div>
+
+				</div>
+				<div class="carBox" style="display: none;">
+					<!--商品列表  -->
+					<div class="carList" >
+						<table cellspacing="0" cellpadding="0" border="0" class="carTable">
+							<thead>
+								<tr>
+									<th width="75"><form autocomplete="off"><input type="checkbox" checked id="nail"></form>全选</th>
+									<th width="355" colspan="2">商品名称</th>
+									<th width="96">发货站</th>
+									<th width="96">价格</th>
+									<th width="140">数量</th>
+									<th width="110">金额小计</th>
+									<th width="110">操作</th>
+
+								</tr>
+							</thead>
+							<tbody id="shoplist">
+								<!-- <tr class="addChecked">
+									<td><input type="checkbox"></td>
+									<td><img src="" alt=""></td>
+									<td><a href=""></a></td>
+									<td>中国大陆</td>
+									<td><span>￥</span>1,618</td>
+									<td><div>-</div><input type="text" class="numContent" value="1"><div>+</div></td>
+									<td>￥<strong>1618</strong>元</td>
+									<td><a href="###">删除</a></td>
+								</tr> -->
+
+							</tbody>
+						</table>
+					</div>
+					<!-- 结算界面 -->
+					<div class="cartPrice">
+						<!-- <p id="shopNum">商品数量统计：1件</p>
+						<p>包装数量统计：0件</p>
+						<p>返利库币：0库币</p>
+						<p>商品金额总计（不含税金和运费）：<strong id="shopListPrice">12223</strong></p>
+						<p><a href="主页.html">继续购物</a><a href="">立即结算</a></p> -->
+					</div>
+					<div class="cartpop" style="display: none;">
+						<div>您确定要删除吗</div>
+						<div><a href="###" id="deleteSure">确定</a>&nbsp<a href="###" id="deleteCancel">取消</a></div>
+					</div>
+				</div>
+			</div>
+			<!-- 购物车猜你喜欢 -->
+			<div style="margin: 0 auto; width: 990px;">
+				<div class="shop_fellLike">
+					<h3>猜你喜欢</h3>
+					<div class="shop_listimg">
+						<div style="overflow: hidden;">
+							<ul>
+								<!-- <li>
+									<div class="epic"><a href=""><img src="../images/shopping/1.jpg" style="width: 120px;height: 120px;" /></a></div>
+									<div class="ename"><a href="">Baobao Wan/Baobao Wan 小小系列</a></div>
+									<div class="eprice"><p><strong>13500</strong>元</p></div>
+								</li> -->
+							</ul>
+						</div>
+						
+						<div class="shop_nav">
+							<span style="display: none;"></span>
+							<span></span>
+						</div>
+
+
+					</div>
+						
+
+				</div>
+			</div>
+		</div>
+		<!-- 购物车底部 -->
+		<div class="shop_foot">
+			<div class="shop_foot1">
+				<div class="shop_foottop">
+					<div class="shop_footleft">
+						<ul>
+							<li>
+								<div class="shop_footleftimg">
+									<p></p>
+
+								</div>
+								<a href="">正品保障</a>
+							</li>
+							<li class="hr"></li>
+							<li>
+								<div class="shop_footleftimg" >
+									<p style="background-position: -91px -1px;"></p>
+
+								</div>
+								<a href="">七天退修</a>
+							</li>
+							<li class="hr"></li>
+							<li>
+								<div class="shop_footleftimg">
+									<p style="background-position: -180px -1px"></p>
+
+								</div>
+								<a href="">维修保养</a>
+							</li>
+							<li class="hr"></li>
+							<li>
+								<div class="shop_footleftimg">
+									<p style="background-position: -270px -1px"></p>
+
+								</div>
+								<a href="">权威鉴定</a>
+							</li>
+							<li class="hr"></li>
+							<li>
+								<div class="shop_footleftimg">
+									<p style="background-position: -358px -1px;"></p>
+
+								</div>
+								<a href="">管家服务</a>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="shop_footcenter">
+						<ul>
+							<li>
+								<a href="">关注寺库微信</a>
+								<span><img src="../images/shopping/weixin.jpg" alt=""></span>
+								<a href="">扫一扫有惊喜</a>
+							</li>
+							<li>
+								<a href="">下载寺库APP</a>
+								<span><img src="../images/shopping/app.jpg" alt=""></span>
+								<a href="">扫一扫有惊喜</a>
+							</li>
+
+						</ul>
+
+					</div>
+					<div class="shop_footright">
+						<p style="height:125px; margin:15px auto 0; width: 170px;overflow: hidden;">
+						<a rel="nofollow" href="http://www.secoo.com/static/help/5-1.shtml" target="_blank">加入寺库</a> <a rel="nofollow" href="http://www.secoo.com/static/help/1-1.shtml" target="_blank">关于寺库</a>
+						<a rel="nofollow" href="http://www.secoo.com/static/help/6-1.shtml" target="_blank">联系我们</a> <a rel="nofollow" href="http://www.secoo.com/static/help/2-1-2-2.shtml" target="_blank">支付方式</a> <a rel="nofollow" href="http://www.secoo.com/static/help/2-1-1-1.shtml" target="_blank">帮助中心</a> <a rel="nofollow" href="http://www.secoo.com/static/help/2-1-4-1.shtml" target="_blank">售后服务</a> <a rel="nofollow" href="http://www.secoo.com/static/help/7-1.shtml" target="_blank">免责声明</a>
+						<a rel="nofollow" href="http://www.secoo.com/static/help/10-1.shtml" target="_blank">礼品采购</a>
+						<a rel="nofollow" href="http://e.weibo.com/sikuchina?ref=http%3A%2F%2Fmy.secoo.com%2Fmysecoo.jsp" target="_blank">寺库微博</a> <a rel="nofollow" href="http://www.secoo.com/friendlink.shtml" target="_blank">友情链接</a>
+					</p>
+
+					</div>
+				</div>
+				
+			</div>
+			<div class="footerListBottom">
+				<div class="footerListBottom01">
+					<div class="footerListBottom01">
+						京ICP备09084709号-3 京公网安备110105004373号 <a href="https://ss.knet.cn/verifyseal.dll?sn=2011041400100007864&amp;ct=df&amp;a=1&amp;pa=330915" target="_blank"><img src="../images/shopping/foot_pic01.png" width="85" height="31"></a> <a href="http://gawa.bjchy.gov.cn/websearch/index.php?sid=c2015974d01136c6a8d3f318845ab7bf" target="_blank"><img src="../images/shopping/foot_pic02.png" width="85" height="31"></a> <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202013081300002" target="_blank"><img src="../images/shopping/gongshangju.png" width="27" height="31"></a>
+					</div>
+				</div>
+			</div>		
+
+		</div>
+
+		<div class="fixBack">
+			<a href="###"></a>
+		</div>
+	</body>
+</html>

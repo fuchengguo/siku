@@ -1,0 +1,302 @@
+@charset "utf-8";
+/* CSS Document */
+#banner{
+margin: 0 25px;
+}
+#banner{
+	margin-top: 20px;
+}
+#banner .banner{
+	position: relative;
+	width: 1200px;
+	height: 523px;
+	
+	/*transition: all 1s;*/
+	
+	
+	margin: 0 auto;
+	
+}
+#banner:hover #banner_right{
+	
+	opacity: 0.65;
+
+
+}
+#banner:hover #banner_left{
+	
+	opacity: 0.65;
+}
+#banner #banner_right{
+	position: absolute;
+	width: 36px;
+	height: 70px;
+	z-index: 10;
+	right: 5px;
+	top: 50%;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background: white;
+	line-height: 80px;
+	text-align: center;
+	cursor: pointer;
+	
+	transition: all .5s;
+}
+#banner #banner_left{
+	position: absolute;
+	left: 5px;
+	z-index: 10;
+	top: 50%;
+	width: 36px;
+	height: 70px;
+	background: white;
+	line-height: 50px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	text-align: center;
+	line-height: 80px;
+	cursor: pointer;
+	
+	transition: all .5s;
+
+
+
+
+}
+#banner #banner_left img{
+	transform: rotate(180deg);
+	
+	
+}
+#banner_img{
+	position: relative;
+	/*overflow: hidden;*/
+	height: 500px;
+
+}
+#banner_img li{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	list-style-type:none;
+	opacity: 0.6;
+	
+	
+}
+#banner_img .on{
+	position: absolute;
+	display: block;
+	z-index: 5;
+	opacity: 1;
+
+}
+#banner_list{
+	margin-top: 20px;
+	height: 3px;
+	text-align: center;
+	font-size: 0;
+}
+#banner_list li{
+	width: 20px;
+	height: 3px;
+	background: #cccccc;
+	margin: 0 2px;
+	display: inline-block;
+	overflow: hidden;
+	
+	
+}
+
+
+#banner_list .on{
+	background: orange;
+	transition: all .7s;
+
+}
+/*图片列表*/
+.activityList1{
+	width: 1300px;
+	overflow: hidden;
+	margin-top: 97px;
+	 font-size: 16px;
+	 line-height: 1;
+}
+.activityList{
+	margin: 0 auto;
+    width: 1200px;  
+   /* background: red;*/
+    overflow: hidden;
+}
+.activityList .activityList1 .img{
+	float: left;
+    margin-right: 20px;
+    width: 590px;
+    height: 450px;
+
+}
+.activityList .activityList1 .img h3{
+	margin: 20px 0 12px;
+    font-size: 26px;
+    transition: all .7s ;
+}
+.activityList .activityList1 .img p{
+	font-size: 16px;
+	 transition: all .7s ;
+}
+.activityList .activityList1 .img .show{
+	overflow: hidden;
+	transition: all .7s linear; 
+	position: relative;
+	height: 330px;
+	
+	
+}
+.activityList .activityList1 .img .show img{
+	width: 100%;
+	height: 100%;
+}
+.show .hid{
+	height: 3px;
+	width: 100%;
+	background: orange;
+	position: absolute;
+	bottom: 0px;
+	opacity: 0;
+	transition: all .7s ; 
+
+}
+.show img{
+	/*transform:translate(-90px,0px);*/
+	
+	width: 100%;
+	height: 100%;
+	transition: all .7s ; 
+
+}
+.show:hover .hid{
+	opacity: 1;
+}
+.show:hover img{
+	transform: scale(1.1) translateZ(0);
+	
+
+}
+
+.img{
+	overflow: hidden;
+	color: black;
+	width: 590px;
+	/*transition: all .5s ;*/ 
+	display: block;
+}
+.img:hover{
+	color: orange;
+}  
+
+/*猜您喜欢*/
+.fellLike{
+	margin: 0 auto;
+	width: 1200px;
+	font-size: 12px;
+	overflow: hidden;
+}
+.fellLike .title{
+	margin: 76px auto 104px;
+    border-top: 1px solid #f8a120;
+    position: relative;
+}
+.fellLike .title span{
+	display: inline-block;
+    width: 160px;
+    line-height: 1;
+    font-size: 26px;
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin: -13px 0 0 -80px;
+}
+.fellLike .slide{
+	position: relative;
+	/*overflow: hidden;*/
+	height: 310px;
+}
+.fellLike .slide ul{
+	width: 5000px;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+.fellLike .slide ol{
+	margin-top: 20px;
+    height: 3px;
+    font-size: 0;
+    text-align: center;
+}
+.fellLike .slide .slide_left{
+	position: absolute;
+	left: 5px;
+	z-index: 10;
+	top: 41%;
+	width: 36px;
+	height: 70px;
+	background: white;
+	line-height: 50px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	text-align: center;
+	line-height: 80px;
+	cursor: pointer;
+	
+	transition: all .5s;
+}
+.fellLike .slide_left img{
+
+	transform: rotate(180deg);
+}
+.fellLike .slide_right{
+	position: absolute;
+	width: 36px;
+	height: 70px;
+	z-index: 10;
+	right: 5px;
+	top: 41%;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background: white;
+	line-height: 80px;
+	text-align: center;
+	cursor: pointer;
+	
+	transition: all .5s;
+}
+.slide:hover .slide_left{
+	opacity: 0.65;
+}
+.slide:hover .slide_right{
+	opacity: 0.65;
+}
+#downlist{
+	position: absolute;
+	
+	/*overflow: hidden;*/
+}
+#downlist li{
+	float: left;
+	
+
+	
+}
+#downlist .active{
+	
+	left: 0
+}
+
+
+/**/
